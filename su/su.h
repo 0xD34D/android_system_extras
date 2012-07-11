@@ -62,6 +62,11 @@ extern int send_intent(struct su_initiator *from, struct su_request *to, const c
 #define LOGW(fmt,args...) fprintf(stderr, fmt , ## args )
 #endif
 
+#define LOGE	ALOGE
+#define LOGD	ALOGD
+#define LOGI	ALOGI
+#define LOGW	ALOGW
+
 #define PLOGE(fmt,args...) LOGE(fmt " failed with %d: %s" , ## args , errno, strerror(errno))
 #define PLOGEV(fmt,err,args...) LOGE(fmt " failed with %d: %s" , ## args , err, strerror(err))
 
